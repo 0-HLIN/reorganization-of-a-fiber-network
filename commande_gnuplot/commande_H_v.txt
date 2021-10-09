@@ -1,0 +1,14 @@
+dataDir = "../donnees/"
+
+
+set title "complexite pour la table de hachage avec M variant"
+set xlabel "Nombre de chaines"
+set ylabel "temps de cpu (seconde)"
+
+plot dataDir."complexite_H_v500.txt" using 1:2 title 'H^v_{500}' with lines
+replot dataDir."complexite_H_v100.txt" using 1:2 title 'H^v_{100}' with lines
+replot dataDir."complexite_H_v10.txt" using 1:2 title 'H^v_{10}' with lines
+replot dataDir."complexite_H_v1.txt" using 1:2 title 'H^v_{1}' with lines
+
+set term postscript portrait
+set size 0.7, 0.7

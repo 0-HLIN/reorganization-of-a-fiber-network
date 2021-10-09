@@ -1,0 +1,13 @@
+dataDir = "../donnees/"
+
+
+set title "complexite pour la table de hachage et l'arbre quaternaire"
+set xlabel "Nombre de chaines"
+set ylabel "temps de cpu (seconde)"
+
+plot dataDir."complexite_H_500000.txt" using 1:2 title 'H^c_{500000}' with lines lc rgb "red"
+replot dataDir."complexite_H_v100.txt" using 1:2 title 'H^v_{100}' with lines lc rgb "red" dt 2
+replot dataDir."complexite_AQ.txt" using 1:2 title 'AQ' with lines lc rgb "blue"
+
+set term postscript portrait
+set size 0.7, 0.7
